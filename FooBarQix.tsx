@@ -1,5 +1,3 @@
-import { string } from "yargs";
-
 const FooBarQix = (str: string): string => {
   type pairType = {
       number: number,
