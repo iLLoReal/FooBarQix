@@ -1,27 +1,20 @@
 const FooBarQix = (str: string): string => {
-  type pairType = {
-      number: number,
-      result: string,
-    };
+  type pairType = { number: number, result: string };
   type matrixType = pairType[];
 
-  const toInt = parseInt(str);
   const pairMatrix: matrixType = [
-    { number: 3, result: 'Foo' },
+    { number: 7, result: 'Qix' },
     { number: 5, result: 'Bar' },
-    { number: 7, result: 'Qix' }
+    { number: 3, result: 'Foo' },
   ];
-  let result = '';
+  const toInt = parseInt(str);
 
   pairMatrix.forEach((elem: pairType) => {
-    if (toInt - elem.number >= 0 && !((toInt - elem.number) % 10)) {
-      result += elem.result;
-    }
-    if (!(toInt % elem.number)) {
-      result += elem.result;
-    }
+  	str = str.replace(new RegExp(`${elem.number}`, "g"), elem.result);
+    str = (!(toInt % elem.number)) ? elem.result + str : str;
   });
-  return result === '' ? str : result;
+  str = str.replace(/[0-9]/g, '');
+  return str.length ? str : toInt.toString();
 };
 
 export default FooBarQix;
