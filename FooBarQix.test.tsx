@@ -32,8 +32,8 @@ test('Pass 9  to FooBarQix should return  Foo', () => {
   expect(FooBarQix('9')).toBe('Foo')
 });
 
-test('Pass 10 to FooBarQix should return  Bar', () => {
-  expect(FooBarQix('10')).toBe('Bar')
+test('Step 2 : Pass 10 to FooBarQix should return  Bar*', () => {
+  expect(FooBarQix('10')).toBe('Bar*')
 });
 
 test('Pass 13 to FooBarQix should return  Foo', () => {
@@ -63,3 +63,21 @@ test('Pass 53 to FooBarQix should return  BarFoo', () => {
 test('Pass 93 to FooBarQix should return  FooFoo', () => {
   expect(FooBarQix('93')).toBe('FooFoo')
 });
+
+test('Step 2 : 101   => 1*1', () => {
+  expect(FooBarQix('101')).toBe('1*1')
+});
+
+test('Step 2 : 303   => FooFoo*Foo', () => {
+  expect(FooBarQix('303')).toBe('FooFoo*Foo')
+});
+
+test('Step 2 : 105   => FooBarQix*Bar', () => {
+  expect(FooBarQix('105')).toBe('FooBarQix*Bar')
+});
+
+test('Step 2 : 10101 => FooQix**', () => {
+  expect(FooBarQix('10101')).toBe('FooQix**')
+});
+
+
