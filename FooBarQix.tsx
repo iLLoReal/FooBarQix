@@ -8,7 +8,7 @@ const FooBarQix = (str: string): string => {
     { number: 3, result: 'Foo' },
     { number: 0, result: '*' },
   ];
-  const toInt = parseInt(str);
+  const toInt: number = parseInt(str);
 
   pairMatrix.forEach((elem: pairType) => {
   	str = str.replace(new RegExp(`${elem.number}`, "g"), elem.result);
@@ -17,7 +17,7 @@ const FooBarQix = (str: string): string => {
   if (str.match(/[a-z]/g)) {
     str = str.replace(/[0-9]/g, '');
   }
-  return str.length ? str : toInt.toString();
+  return str;
 };
 
 export default FooBarQix;
