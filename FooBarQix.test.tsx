@@ -59,3 +59,7 @@ test('Pass 51 to FooBarQix should return  FooBar', () => {
 test('Pass 53 to FooBarQix should return  BarFoo', () => {
   expect(FooBarQix('53')).toBe('BarFoo')
 });
+
+test('Pass 93 to FooBarQix should return  FooFoo', () => {
+  expect(FooBarQix('93')).toBe('FooFoo')
+});
